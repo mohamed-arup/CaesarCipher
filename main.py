@@ -1,7 +1,15 @@
-import clear, replit
+import os
+import sys
 from logo import encode_logo, decode_logo
 alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+if 'windows' in sys.platform:
+  def clear():
+    os.system('cls')
+else:
+  def clear():
+    os.system('clear')
+    
 upper_alpha = []
 
 for item in alpha:
